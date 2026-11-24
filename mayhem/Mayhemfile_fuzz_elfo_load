@@ -1,0 +1,9 @@
+project: savantenvs/PocketMage_PDA
+target: fuzz_elfo_load
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz_elfo_load/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_elfo_load
+    libfuzzer: true
+    timeout: 5
